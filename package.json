@@ -1,0 +1,27 @@
+{
+  "name": "ws-datapiper",
+  "version": "0.1.0",
+  "description": "Web Socket data pipe",
+  "author": "jnbai",
+  "repository": "git@github.com:gamwang/node-ws-datapiper.git",
+  "publishConfig": {
+      "registry": "http://npmjs.org"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ws": "~0.7.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "grunt": "~0.4.1",
+    "jshint": "^2",
+    "grunt-mocha-cli": "~1.5.0"
+  }
+}
