@@ -16,7 +16,7 @@ Sending Data Example:
 var Logger = require('ws-datapiper');
 var url = 'http://localhost:4321';
 var options = {
-    timeout = 5000,
+    timeout: 5000,
     queueSize: 10000,
     timeIncr: 3000
 };
