@@ -36,12 +36,11 @@ var options = {
 };
 var server = new Server(options); //Instantiates the server
 
-server.on('connection', function () {
-    console.log('connected');
-});
-
-server.on('data', function (data) {
-    console.log('Received: ' + data);
+server.on('connection', function (ws) {
+    console.log('Connected!');
+    ws.on('message', function (data) {
+        console.log('Received: ' + data);
+    });
 });
 ```
 
