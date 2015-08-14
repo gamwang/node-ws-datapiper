@@ -12,20 +12,37 @@ npm install ws-datapiper --save
 
 Sending Data Example:
 
+- Client:
 ```javascript
-var Logger = require('ws-datapiper');
+var Client = require('ws-datapiper');
 var url = 'http://localhost:4321';
 var options = {
     timeout: 5000,
     queueSize: 10000,
     timeIncr: 3000
 };
-var client = new Logger(url, options); // Instantiates the client
+var client = new Client(url, options); // Instantiates the client
 var data = {
     id: "qorhvkalclrpTsp82",
     message: "This is data!"
 };
 client.send(data); // sends data to server in http://localhost:4321
+```
+- Server:
+```javascript
+var Server = require('ws-datapiper').Server;
+var options = {
+    port: 4321
+};
+var server = new Server(options); //Instantiates the server
+
+server.on('connection', function () {
+    console.log('connected');
+});
+
+server.on('data', function (data) {
+    console.log('Received: ' + data);
+});
 ```
 
 # API
