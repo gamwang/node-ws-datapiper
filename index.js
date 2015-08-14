@@ -1,3 +1,5 @@
 'use strict';
 
-module.exports = require('./lib/ws-datapiper');
+var datapiper = module.exports = require('./lib/ws-datapiper');
+datapiper.Server = require('./lib/ws-datapiperServer');
+
